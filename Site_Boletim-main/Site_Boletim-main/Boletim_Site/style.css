@@ -1,0 +1,165 @@
+/* === FONTES PERSONALIZADAS === */
+@font-face {
+    font-family: 'Altivo';
+    src: url('Fontes/ALTIVO/Fontspring-DEMO-altivo-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Founders Grotesk';
+    src: url('Fontes/Founders Grotesk/FoundersGrotesk-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Altivo', sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Founders Grotesk', sans-serif;
+  }
+  
+  /* === NAVBAR === */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #022873;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  .dropdown-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1001;
+  }
+  
+  .dropdown-content a {
+    color: #022873;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #173FE5;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .search-input {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    margin-left: auto;
+  }
+  
+  /* === RESPONSIVO === */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+  
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  
+    .navbar.active .dropdown-button,
+    .navbar.active .search-input {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .dropdown-button {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+  
+    .dropdown-content {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .dropdown-content a {
+      padding: 6px 0;
+      font-size: 13px;
+      color: white;
+    }
+  
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .search-input {
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+      font-size: 13px;
+    }
+  }

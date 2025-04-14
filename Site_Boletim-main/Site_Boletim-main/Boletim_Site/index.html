@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletim MPOR</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Images/logo_mpor_cabeçalho.webp" type="image/x-icon">
+
+    <!-- Fonte externa (se necessário) -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar" class="navbar">
+        <img src="Images/logo_mpor.webp" alt="Logo Ministério de Portos e Aeroportos" style="height: 40px; margin-right: 10px;margin-left: 15px;">
+        <div class="menu-toggle" id="menu-toggle">
+          <div class="menu-toggle" id="menu-toggle">
+            <span id="menu-icon">&#9776;</span>
+            <span id="close-icon">&times;</span>
+          </div>
+        </div>
+
+
+
+        <div class="dropdown">
+            <button class="dropdown-button">Destaques</button>
+            <div class="dropdown-content">
+            
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">Orçamento e Execução</button>
+            <div class="dropdown-content">
+            
+            </div>
+        </div>
+        
+        
+        <div class="dropdown">
+            <button class="dropdown-button">Conjuntura Econômica </button>
+            <div class="dropdown-content">
+                <a href="#dolar">Dólar e Euro</a>
+                <a href="Conjuntura_Eco/Selic.html">SELIC</a>
+                <a href="#ipca">IPCA</a>
+                <a href="#ipca">Comércio Exterior</a>
+                <a href="#ipca">Contas Públicas</a>
+                <a href="#ipca">PIB</a>
+                <a href="#ipca">Balanço de Pagamentos</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-button">Aeroportos e Transporte Aéreo </button>
+            <div class="dropdown-content">
+                <a href="#aeroportos">Companhias aéreas</a>
+                <a href="Aeroportos_e_/ConsumoQAV.HTML">Consumo de QAV</a>
+                <a href="#aeroportos">Movimentação de passageiros</a>
+                <a href="#aeroportos">Movimentação de cargas</a>
+                <a href="#aeroportos">Comércio exterior pelo modal aéreo</a>
+                <a href="#aeroportos">Ações ESG nos aeroportos</a>
+                <a href="#aeroportos">Projeção de passageiros</a>
+                <a href="#aeroportos">Novas tecnologias para os setores: Nacional e internacional</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-button">Portos e Transporte Aquaviário </button>
+            <div class="dropdown-content">
+                <a href="#portos">Movimentação Portuária</a>
+                <a href="#terminais">Terminais</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-button">Clima e Meio Ambiente </button>
+            <div class="dropdown-content">
+                <a href="#clima">Clima</a>
+                <a href="#meioambiente">Dados Ambientais</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-button">Licenciamento Ambiental </button>
+            <div class="dropdown-content">
+                <a href="#licenciamento">Processos em Andamento</a>
+                <a href="#autorizacoes">Autorizações Emitidas</a>
+            </div>
+            <input type="text" id="searchBox" placeholder="Buscar..." class="search-input">
+
+        </div>
+    </div>
+
+    <div style="height: 100px;"></div>
+
+<div style="padding: 10px; max-width: 1850px; margin: auto; font-family: 'Inter', sans-serif;">
+  <h1 style="color: #022873; margin-bottom: 10px;">Painel Econômico</h1>
+ 
+
+  <div class="section" style="display: flex; flex-direction: column; gap: 20px;">
+    <h2 id="ipca" style="color: #022873;">Inflação Acumulada em 12 Meses</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; background-color: #f1f1f1; padding: 30px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05);">
+
+      <!-- Gráfico -->
+      <div style="flex: 1,5; min-width: 300px;">
+        <div id="grafico-ipca" style="width: 95%; height: 400px;">
+        </div>
+
+      <!-- Bloco de análise -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; min-width: 250px;">
+
+        <div style="background: #fff; padding: 20px; border-radius: 10px;">
+          <h3 style="color: #022873; margin-bottom: 10px;">Análise</h3>
+          <p style="line-height: 1.6;">
+            Em <strong>março de 2025</strong>, o IPCA acumulado em 12 meses foi de <strong>5,48%</strong>, enquanto o IGP-M foi de <strong>8,59%</strong>.
+            <br><br>
+            A diferença entre os índices demonstra pressões distintas sobre os preços ao consumidor e ao produtor.
+          </p>
+        </div>
+
+        <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.05);">
+          <h3 style="color: #022873; margin-bottom: 10px;">Observações Complementares</h3>
+          <p style="line-height: 1.6;">
+            O comportamento do IGP-M pode impactar os contratos de aluguel e reajustes. A queda expressiva após 2022 indica desaceleração das pressões de custo, mas exige atenção contínua.
+          </p>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+          
+          
+         
+        </div>
+    </div>
+
+    <script src="/Site_Boletim-main/Boletim_Site/script.js"></script>
+
+</body>
+</html>
