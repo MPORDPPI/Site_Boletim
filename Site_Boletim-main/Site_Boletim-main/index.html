@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Econômico - 11/04/2025</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Fontes e estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #022873;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .dropdown-button {
+            background-color: #022873;
+            color: white;
+            padding: 10px 16px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 240px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content a {
+            color: #022873;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #173FE5;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <div class="dropdown">
+            <button class="dropdown-button">Conjuntura Econômica ▼</button>
+            <div class="dropdown-content">
+                <a href="#dolar">Dólar e Euro</a>
+                <a href="#selic">SELIC</a>
+                <a href="#ipca">IPCA</a>
+                <a href="#ipca">Comércio Exterior</a>
+                <a href="#ipca">Contas Públicas</a>
+                <a href="#ipca">PIB</a>
+                <a href="#ipca">Balanço de Pagamentos</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">Aeroportos e Transporte Aéreo ▼</button>
+            <div class="dropdown-content">
+                <a href="#aeroportos">Companhias aéreas</a>
+                <a href="#aeroportos">Consumo de QAV</a>
+                <a href="#aeroportos">Movimentação de passageiros</a>
+                <a href="#aeroportos">Movimentação de cargas</a>
+                <a href="#aeroportos">Comércio exterior pelo modal aéreo</a>
+                <a href="#aeroportos">Ações ESG nos aeroportos</a>
+                <a href="#aeroportos">Projeção de passageiros</a>
+                <a href="#aeroportos">Novas tecnologias para os setores: Nacional e internacional</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">Portos e Transporte Aquaviário ▼</button>
+            <div class="dropdown-content">
+                <a href="#portos">Movimentação Portuária</a>
+                <a href="#terminais">Terminais</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">Clima e Meio Ambiente ▼</button>
+            <div class="dropdown-content">
+                <a href="#clima">Clima</a>
+                <a href="#meioambiente">Dados Ambientais</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-button">Licenciamento Ambiental ▼</button>
+            <div class="dropdown-content">
+                <a href="#licenciamento">Processos em Andamento</a>
+                <a href="#autorizacoes">Autorizações Emitidas</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="height:70px;"></div>
+
+    <div style="padding: 20px;">
+        <h1 style="color:#022873;">Painel Econômico Interativo</h1>
+        <p><b>Data de geração:</b> 11/04/2025</p>
+
+        <!-- Bloco de exemplo -->
+        <div class="section">
+            <h2 id="dolar">Dólar</h2>
+            <div style="height:300px; background:#ccc; display:flex; align-items:center; justify-content:center; color:#444;">
+                Gráfico de Dólar será exibido aqui.
+            </div>
+            <hr style="margin:40px 0"/>
+        </div>
+    </div>
+
+    <!-- Script de busca -->
+    <script>
+    document.querySelector('#navbar input')?.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        document.querySelectorAll('.section').forEach(section => {
+            const h2 = section.querySelector('h2');
+            if (h2 && h2.innerText.toLowerCase().includes(searchTerm)) {
+                section.style.display = '';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
